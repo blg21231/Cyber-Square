@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Square</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Your custom JavaScript -->
+    <script type="module" src="./main.js"></script>
+  </head>
+
+  <body class="dark">
+    <header>
+        <div class="container">
+          <h1 class="main-title">Cyber Square</h1> <!-- Add the custom class -->
+            <p>dCommerce Marketplace for Digital Goods</p>
+            <w3m-core-button id="connectWalletButton"></w3m-core-button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="list-section">
+              <h2 class="main-title">List</h2> <!-- Add the custom class -->
+              <form id="list-form">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name" title="Name for your digital good">Name <span class="tooltip">?</span></label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="description" title="Description for your digital good">Description <span class="tooltip">?</span></label>
+                        <input type="text" class="form-control" id="description" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="category" title="Category for your digital good (e.g. ticket, pass, video, etc)">Category <span class="tooltip">?</span></label>
+                        <input type="text" class="form-control" id="category" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="price" title="Price for your digital good in ETH">Price (ETH) <span class="tooltip">?</span></label>
+                        <input type="text" class="form-control" id="listerPrice" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="totalSupply" title="Total Supply for your digital good in ETH">Total Supply <span class="tooltip">?</span></label>
+                        <input type="text" class="form-control" id="totalSupply" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="preview-link" title="Preview link for your digital good (eg website, promo video, social media, etc)">Preview Link <span class="tooltip">?</span></label>
+                        <input type="url" class="form-control" id="preview-link" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="access-link" title="Access link to your digital good (eg website for NFT holders only, link to original content, QR Code, etc)">Access Link <span class="tooltip">?</span></label>
+                        <input type="url" class="form-control" id="access-link" required>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">List for Sale</button>
+                </form>
+            </section>
+              <hr>
+              <section class="shop-section">
+                <h2 class="main-title">Shop</h2> <!-- Add the custom class -->
+                  <div class="input-group">
+                      <input type="text" id="search-input" class="form-control" placeholder="Search for digital goods">
+                      <div class="input-group-append">
+                          <button class="btn btn-primary" id="search-btn">Search</button>
+                      </div>
+                  </div>
+                  <div class="table-responsive mt-5">
+                      <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Token ID</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Lister</th>
+                                    <th>Price (ETH)</th>
+                                    <th>Remaining Supply</th>
+                                    <th>Preview Link</th>
+                                    <th>Access Link</th>
+                                    <th>Buy</th>
+                                </tr>
+                            </thead>
+                            <tbody id="goods">
+                                <!-- Example row -->
+                                <tr>
+                                    <td data-heading="Token ID">Token ID</td>
+                                    <td data-heading="Name">Name for your digital good</td>
+                                    <td data-heading="Description">Description for your digital good</td>
+                                    <td data-heading="Category">Category for your digital good (e.g. ticket, pass, video, etc)</td>
+                                    <td data-heading="Lister">Lister of the digital good</td>
+                                    <td data-heading="Price (ETH)">0.001</td>
+                                    <td data-heading="Remaining Supply">1000</td>
+                                    <td data-heading="Preview Link"><a href="#">Preview link for your digital good (eg website, promo video, social media, etc)</a></td>
+                                    <td data-heading="Access Link"><a href="#">Access link to your digital good (eg website for NFT holders only, link to original content, QR Code, etc)</a></td>
+                                    <td data-heading="Buy"><button>Buy</button></td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                      </table>
+                  </div>
+              </section>
+              <p class="mt-5 small text-center">Cyber Square disclaims all liability related to the listing and purchasing of digital goods. Users are advised to exercise caution and assume all risks associated with such transactions.</p>
+          </div>
+      </main>        
+    </body>
+</html>                   
